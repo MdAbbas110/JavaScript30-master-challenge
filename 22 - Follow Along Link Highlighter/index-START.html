@@ -55,6 +55,14 @@
       function highlightLinks() {
         const linkCoord = this.getBoundingClientRect();
         console.log(linkCoord);
+
+        const coords = {
+          width: linkCoord.width,
+          height: linkCoord.hight,
+          top: linkCoord.top + window.scrollY,
+          left: linkCoord.left + window.scrollX,
+        };
+
         highlight.style.width = `${linkCoord.width}px`;
         highlight.style.height = `${linkCoord.hight}px`;
 
